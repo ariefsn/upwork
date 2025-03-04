@@ -1,0 +1,102 @@
+version: '3'
+
+name: upwork
+
+services:
+
+  redis:
+    container_name: upwork-redis
+    image: redis
+    restart: always
+    mem_limit: 512m
+    environment:
+      - REDIS_PASSWORD=${BE_REDIS_PASSWORD}
+    networks:
+      - upwork-network
+
+  mongo:
+    container_name: upwork-mongo
+    image: mongo
+    restart: always
+    mem_limit: 150m
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${BE_MONGO_USER}
+      - MONGO_INITDB_ROOT_PASSWORD=${BE_MONGO_PASSWORD}
+      - MONGO_INITDB_DATABASE=${BE_MONGO_DB}
+    volumes:
+      - ./volumes/mongo:/data/db
+    ports:
+      - "27019:27017"
+    networks:
+      - upwork-network
+
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+      args:
+        - PORT=${BE_APP_PORT}
+    container_name: upwork-backend
+    restart: always
+    environment:
+      - APP_HOST=${BE_APP_HOST}
+      - APP_PORT=${BE_APP_PORT}
+      - APP_NAME=${BE_APP_NAME}
+      - MONGO_HOST=${BE_MONGO_HOST}
+      - MONGO_PORT=${BE_MONGO_PORT}
+      - MONGO_USER=${BE_MONGO_USER}
+      - MONGO_PASSWORD=${BE_MONGO_PASSWORD}
+      - MONGO_DB=${BE_MONGO_DB}
+      - REDIS_HOST=${BE_REDIS_HOST}
+      - REDIS_PORT=${BE_REDIS_PORT}
+      - REDIS_USER=${BE_REDIS_USER}
+      - REDIS_PASSWORD=${BE_REDIS_PASSWORD}
+      - REDIS_DB=${BE_REDIS_DB}
+      - JWT_SECRET=${BE_JWT_SECRET}
+      - JWT_EXPIRY=${BE_JWT_EXPIRY}
+      - TERKIRIM_API_KEY=${BE_TERKIRIM_API_KEY}
+      - TERKIRIM_EMAIL_SENDER=${BE_TERKIRIM_EMAIL_SENDER}
+      - TERKIRIM_EMAIL_SENDER_NAME=${BE_TERKIRIM_EMAIL_SENDER_NAME}
+      - URL_ORIGIN=${BE_URL_ORIGIN}
+      - URL_UPWORK_FREELANCER_PROFILE=${BE_URL_UPWORK_FREELANCER_PROFILE}
+    volumes:
+      - ./volumes/backend/.cache:/.cache/
+      - ./volumes/backend/root:/root/
+    ports:
+      - "${BE_APP_PORT}:${BE_APP_PORT}"
+    depends_on:
+      - mongo
+      - redis
+    networks:
+      - upwork-network
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+      args:
+        - PORT=${FE_PORT}
+        - PUBLIC_APP_NAME=${FE_PUBLIC_APP_NAME}
+        - PUBLIC_API_URL=${FE_PUBLIC_API_URL}
+        - ORIGIN=${FE_ORIGIN}
+        - PUBLIC_GOOGLE_TAG_ID=${FE_PUBLIC_GOOGLE_TAG_ID}
+    container_name: upwork-frontend
+    environment:
+      - PORT=${FE_PORT}
+      - PUBLIC_APP_NAME=${FE_PUBLIC_APP_NAME}
+      - PUBLIC_API_URL=${FE_PUBLIC_API_URL}
+      - ORIGIN=${FE_ORIGIN}
+      - PUBLIC_ORIGIN=${FE_ORIGIN}
+      - PUBLIC_GOOGLE_TAG_ID=${FE_PUBLIC_GOOGLE_TAG_ID}
+      - BODY_SIZE_LIMIT=${FE_BODY_SIZE_LIMIT}
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "${FE_PORT}:${FE_PORT}"
+    networks:
+      - upwork-network
+
+
+networks:
+  upwork-network:

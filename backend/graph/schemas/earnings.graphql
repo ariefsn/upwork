@@ -1,0 +1,66 @@
+enum EarningType {
+  FixedPrice
+  Hourly
+}
+
+input EarningsInput {
+  file: Upload!
+  userID: String!
+  email: String!
+}
+
+type EarningsData {
+  id: String!
+  userID: String!
+	day: Int!
+	month: Int!
+	year: Int!
+	refID: String!
+	type: EarningType!
+	description: String!
+	team: String!
+	amount: Float!
+  fee: Float!
+}
+
+type EarningsDataMonthlyItem {
+	type: EarningType!
+	amount: Float!
+  fee: Float!
+}
+
+type EarningsDataMonthly {
+  userID: String!
+	month: Int!
+	year: Int!
+	totalAmount: Float!
+	totalFee: Float!
+  items: [EarningsDataMonthlyItem!]!
+}
+
+input EarningsUserPerYearInput {
+  userID: String!
+  year: Int!
+}
+
+type EarningsUserPerYear {
+  user: UserData!
+  amount: Float!
+  fee: Float!
+}
+
+extend type Query {
+  getEarnings(input: EarningsUserPerYearInput!): [EarningsDataMonthly]!
+  getEarningsUsers(input: Int!): [EarningsUserPerYear]!
+  getEarningsYears(input: String!): [Int!]!
+}
+
+extend type Mutation {
+  uploadEarnings(input: EarningsInput!): [EarningsData!]!
+}
+
+extend type Subscription {
+  subEarnings(input: EarningsUserPerYearInput!): [EarningsDataMonthly]!
+  subEarningUsers(input: Int!): [EarningsUserPerYear!]!
+  subOnEarningUpdated(input: EarningsUserPerYearInput!): [EarningsDataMonthly]!
+}

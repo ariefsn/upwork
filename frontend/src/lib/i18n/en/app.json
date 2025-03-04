@@ -1,0 +1,6 @@
+{
+  "back": "Back",
+  "oops": "Oops",
+  "somethingWentWrong": "Something went wrong",
+  "year": "{{ yearCount:gt; 0:{{ yearCount; 1: Years; default: Year }}; default:Year; }}"
+}

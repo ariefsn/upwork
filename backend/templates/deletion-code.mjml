@@ -1,0 +1,30 @@
+<mjml>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+
+        <mj-divider border-color="#000000"></mj-divider>
+
+        <mj-text font-size="16px" color="#000000" font-family="helvetica">
+        	Hello ✋🏻 {{ fullName }},
+        </mj-text>
+
+        <mj-text font-size="16px" color="#000000" font-family="helvetica" line-height="1.5">
+        	Here is your code deletion. Please keep this code safety. You can use this code for deleting your account. Note that once you delete your account, this mean will delete all of your data including the history transactions.
+        </mj-text>
+
+        <mj-text font-size="24px" color="#000000" font-family="helvetica" line-height="1.5" font-weight="bold" align="center">
+        	{{ code }}
+        </mj-text>
+
+       
+        <mj-text font-size="16px" color="black" font-family="helvetica">
+        	Thanks
+        </mj-text>
+
+        <mj-divider border-color="#000000"></mj-divider>
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

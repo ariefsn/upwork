@@ -1,0 +1,23 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "API Upwork Service.",
+        "title": "Upwork Service",
+        "contact": {
+            "name": "API Support",
+            "url": "https://ariefsn.dev",
+            "email": "hello@ariefsn.dev"
+        },
+        "version": "3.0"
+    },
+    "basePath": "/",
+    "paths": {},
+    "securityDefinitions": {
+        "Bearer": {
+            "description": "Description for what is this security definition being used",
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header"
+        }
+    }
+}

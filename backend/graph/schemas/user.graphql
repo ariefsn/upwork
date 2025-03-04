@@ -1,0 +1,23 @@
+type UserData {
+  id: String!
+  fullName: String!
+  title: String!
+  city: String!
+  country: String!
+  url: String!
+}
+
+input DeleteUserInput {
+  id: String!
+  code: String!
+}
+
+extend type Query {
+  getUser(input: String!): UserData!
+  getUserIds: [String!]!
+}
+
+extend type Mutation {
+  resendDeleteToken(input: String!): String!
+  deleteUser(input: DeleteUserInput): UserData!
+}

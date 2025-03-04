@@ -1,0 +1,48 @@
+{
+  "title": "Punya pertanyaan?",
+  "faq": "{{ faqCount:gt; 0:{{ faqCount; 1: Tanya Jawab; default: Tanya Jawab }}; default:Tanya Jawab; }}",
+  "whatIsThis": {
+    "question": "Aplikasi apa ini?",
+    "answer": "Ini adalah aplikasi untuk membagikan pendapatan Upwork Kamu. Kamu dapat melihat hasil per tahun di grafik. Kamu juga dapat membagikan penghasilan kamu dengan teman-temanmu."
+  },
+  "howDoesItWork": {
+    "question": "Bagaimana cara kerjanya?",
+    "answer": "Kamu perlu mengekspor laporan transaksi dari Upwork sebagai file CSV, lalu unggah di sini."
+  },
+  "howCanIGetMyUpworkID": {
+    "question": "Bagaimana cara mendapatkan ID Upwork saya?",
+    "answer": "Kamu dapat pergi ke halaman profil, dan memeriksa bilah alamat yang akan seperti ini: https://www.upwork.com/freelancers/<id>. <id> adalah ID Upwork kamu."
+  },
+  "canIUseMyUsernameInsteadOfMyUpworkID": {
+    "question": "Dapatkah saya menggunakan nama pengguna saya alih-alih ID Upwork saya?",
+    "answer": "Ya, kamu bisa menggunakan nama pengguna kamu."
+  },
+  "isTheAppFree": {
+    "question": "Apakah aplikasinya gratis?",
+    "answer": "Ya, aplikasi ini gratis."
+  },
+  "isTheAppNeedsToAccessMyUpworkAccount": {
+    "question": "Apakah aplikasi ini perlu mengakses akun Upwork saya?",
+    "answer": "Tidak, aplikasi tidak perlu mengakses akun Upwork kamu."
+  },
+  "whereICanExportMyEarningsFromUpwork": {
+    "question": "Di mana saya dapat mengekspor penghasilan saya dari Upwork?",
+    "answer": "Kamu dapat pergi ke halaman transaksi dan faktur, pilih rentang tanggal, lalu unduh sebagai CSV."
+  },
+  "isItWillReadAllOfTheTransactionTypes": {
+    "question": "Apakah aplikasi akan membaca semua jenis transaksi?",
+    "answer": "Tidak, aplikasi hanya membaca transaksi per jam dan fixed, juga biaya jika ada."
+  },
+  "isMyUploadedCSVFileWillBeStored": {
+    "question": "Apakah file CSV saya yang diunggah akan disimpan?",
+    "answer": "Tidak, file CSV kamu yang diunggah tidak akan disimpan."
+  },
+  "canIDeleteMyHistory": {
+    "question": "Bisakah saya menghapus riwayat saya?",
+    "answer": "Ya, tentu saja kamu dapat menghapus riwayatmu."
+  },
+  "canISeeTheSourceCode": {
+    "question": "Bisakah saya melihat kodenya?",
+    "answer": "Ya, kamu bisa melihat kode sumber di {{ faqSourceCodeLink }}"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "profile": "Upwork Profile",
+  "noEarnings": "Looks like this freelancer hasn't made any earnings yet.",
+  "noFreelancers": "No freelancers found.",
+  "uploadEarnings": "Upload Yours",
+  "uploadForm": {
+    "toast": {
+      "upload": {
+        "success": {
+          "message": "Yeayy! Your earnings have been uploaded. 🚀"
+        }
+      }
+    },
+    "inputs": {
+      "userID": {
+        "label": "Upwork ID",
+        "placeholder": "Your Upwork ID",
+        "hint": "Please check {{faq}} on how to get your Upwork ID."
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Your Email Address",
+        "hint": "Please provide an active email address. A code will be sent to this email."
+      },
+      "file": {
+        "label": "CSV File",
+        "placeholder": "Drop your CSV file here, or click to select."
+      }
+    },
+    "buttons": {
+      "submit": {
+        "title": "Upload"
+      }
+    }
+  }
+}

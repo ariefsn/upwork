@@ -1,0 +1,35 @@
+{
+  "deleteForm": {
+    "toast": {
+      "resend": {
+        "success": {
+          "message": "Kode telah dikirim ke email kamu."
+        }
+      },
+      "delete": {
+        "success": {
+          "message": "Akun kamu telah dihapus. 😔"
+        }
+      }
+    },
+    "inputs": {
+      "userID": {
+        "label": "Upwork ID",
+        "placeholder": "ID Upwork kamu"
+      },
+      "code": {
+        "label": "Kode",
+        "placeholder": "Kode penghapusan kamu"
+      }
+    },
+    "buttons": {
+      "submit": {
+        "title": "Ya, hapus akun saya",
+        "warn": "Setelah kamu menghapus akun, semua data kamu akan dihapus secara permanen. Langkah ini tidak bisa dibatalkan."
+      },
+      "resend": {
+        "title": "Kirim kode"
+      }
+    }
+  }
+}

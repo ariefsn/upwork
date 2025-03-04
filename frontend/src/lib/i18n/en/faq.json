@@ -1,0 +1,48 @@
+{
+  "title": "Have Questions?",
+  "faq": "{{ faqCount:gt; 0:{{ faqCount; 1: FAQs; default: FAQs }}; default:FAQ; }}",
+  "whatIsThis": {
+    "question": "What is this?",
+    "answer": "This is a mini app for showing your Upwork's earnings. You can see your earnings yearly in bar chart. Also you can share your earnings with your friends."
+  },
+  "howDoesItWork": {
+    "question": "How does it work?",
+    "answer": "You need to export your earnings from Upwork as CSV file, then upload it here."
+  },
+  "howCanIGetMyUpworkID": {
+    "question": "How can I get my Upwork ID?",
+    "answer": "You can go to your profile, and check the address bar, it will look like this: https://www.upwork.com/freelancers/<id>. The <id> is your Upwork ID."
+  },
+  "canIUseMyUsernameInsteadOfMyUpworkID": {
+    "question": "Can I use my username instead of my Upwork ID?",
+    "answer": "Yes, you can use your username instead of your Upwork ID."
+  },
+  "isTheAppFree": {
+    "question": "Is the app free?",
+    "answer": "Yes, the app is free."
+  },
+  "isTheAppNeedsToAccessMyUpworkAccount": {
+    "question": "Is the app needs to access my Upwork account?",
+    "answer": "No, the app does not need to access your Upwork account."
+  },
+  "whereICanExportMyEarningsFromUpwork": {
+    "question": "Where I can export my earnings from Upwork?",
+    "answer": "You can go to Transactions and Invoices page, choose the date range, then download as CSV."
+  },
+  "isItWillReadAllOfTheTransactionTypes": {
+    "question": "Is it will read all of the transaction types?",
+    "answer": "No, the app only read the hourly and fixed price transactions, and the fee if any."
+  },
+  "isMyUploadedCSVFileWillBeStored": {
+    "question": "Is my uploaded CSV file will be stored?",
+    "answer": "No, your uploaded CSV file will not be stored."
+  },
+  "canIDeleteMyHistory": {
+    "question": "Can I delete my history?",
+    "answer": "Yes, you can delete your history."
+  },
+  "canISeeTheSourceCode": {
+    "question": "Can I see the source code?",
+    "answer": "Yes, you can see the source code at {{ faqSourceCodeLink }}"
+  }
+}

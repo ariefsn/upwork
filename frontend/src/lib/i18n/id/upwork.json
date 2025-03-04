@@ -1,0 +1,36 @@
+{
+  "profile": "Profil Upwork",
+  "noEarnings": "Sepertinya freelancer ini belum menghasilkan penghasilan.",
+  "noFreelancers": "Tidak ada freelancer yang ditemukan.",
+  "uploadEarnings": "Unggah milikmu",
+  "uploadForm": {
+    "toast": {
+      "upload": {
+        "success": {
+          "message": "Yeayy! Penghasilanmu telah diunggah. 🚀"
+        }
+      }
+    },
+    "inputs": {
+      "userID": {
+        "label": "ID Upwork",
+        "placeholder": "ID Upwork kamu",
+        "hint": "Silakan periksa {{faq}} tentang cara mendapatkan ID Upwork Anda."
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Alamat email kamu",
+        "hint": "Harap berikan alamat email aktif. Kode akan dikirim ke email ini."
+      },
+      "file": {
+        "label": "File CSV",
+        "placeholder": "Letakkan file CSV-mu di sini, atau klik untuk memilih."
+      }
+    },
+    "buttons": {
+      "submit": {
+        "title": "Unggah"
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "deleteForm": {
+    "toast": {
+      "resend": {
+        "success": {
+          "message": "Code has been sent to your email."
+        }
+      },
+      "delete": {
+        "success": {
+          "message": "Your account has been deleted. 😔"
+        }
+      }
+    },
+    "inputs": {
+      "userID": {
+        "label": "Upwork ID",
+        "placeholder": "Your Upwork ID"
+      },
+      "code": {
+        "label": "Code",
+        "placeholder": "Your deletion code"
+      }
+    },
+    "buttons": {
+      "submit": {
+        "title": "Yes, delete my account",
+        "warn": "Once you delete your account, all of your data will be permanently deleted. This action cannot be undone."
+      },
+      "resend": {
+        "title": "Resend"
+      }
+    }
+  }
+}
