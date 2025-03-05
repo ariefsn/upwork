@@ -89,7 +89,7 @@ func (s *scrapeService) GetProfile(ctx context.Context, userID string) (*models.
 
 	if _, err := page.Goto(url, playwright.PageGotoOptions{
 		WaitUntil: playwright.WaitUntilStateNetworkidle,
-		// Timeout:   playwright.Float(3000),
+		Timeout:   playwright.Float(60000),
 	}); err != nil {
 		logger.Error(err, models.M{
 			"file": "scrape_service",
