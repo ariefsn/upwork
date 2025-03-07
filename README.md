@@ -43,3 +43,7 @@ Please check the documentation of each services:
 1. Go to `compose` directory
 2. Copy `.env.example` to `.env` and set the values
 3. Run `docker compose up -d`
+
+## Memory
+
+The app will scrape the freelancer's profile page once, this using `Playwright-Go` and `Firefox`'s headless browser. Please note that this will need some seconds for the initial time. And when scraping, it will need around `-+800MB` memory consumtion.
